@@ -66,3 +66,30 @@ I even created a small text editor to populate comments with, which I'm pretty p
 * More data validation in app / express
 
 ### Credits
+
+Images from unsplash:
+american-heritage-chocolate-HJUae0j54tI-unsplash.webp
+europeana--F7h7BoDJgE-unsplash.webp
+andrew-neel-1-29wyvvLJA-unsplash.webp 
+federico-di-dio-photography-Z9aR-ewdQTc-unsplash.webp
+ronda-darby-HbMLSB-uhQY-unsplash.webp
+austrian-national-library-SbfN4EOuXTM-unsplash.webp
+gigi-m_DoGWrKi_Q-unsplash.webp
+science-in-hd-M96M9iBo69w-unsplash.webp
+birmingham-museums-trust-_HkidxoIx9w-unsplash.webp
+luis-cortes-K5Uz7Ob3r3E-unsplash.webp
+stijn-swinnen-qwe8TLRnG8k-unsplash.webp
+birmingham-museums-trust-5EUh-tq31eA-unsplash.webp
+marc-olivier-jodoin--HIiNFXcbtQ-unsplash.webp
+the-new-york-public-library-PayBPDUL5Rk-unsplash.webp
+british-library-Z5glwhD3LH8-unsplash-big.webp
+max-titov-xtRWIviknsw-unsplash.webp
+thisisengineering-raeng-qqp5_2Onf6o-unsplash.webp
+british-library-Z5glwhD3LH8-unsplash-small.webp
+museums-victoria-5g3m1WPjrLI-unsplash.webp
+ulvi-safari-WClG5w6GC9I-unsplash.webp
+brooke-lark-ZkgWJ4BfgsE-unsplash.webp
+natalia-y-f5xddISq428-unsplash.webp
+ux-indonesia-qC2n6RQU4Vw-unsplash.webp
+cins-IYdzaMkthS8-unsplash.webp
+nicole-reyes-FRZ8jQ9j85U-unsplash.webp
