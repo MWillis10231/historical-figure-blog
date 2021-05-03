@@ -1,8 +1,3 @@
-
---
--- Name: blog_comments; Type: TABLE; Schema: public; Owner: postgres
---
-
 CREATE TABLE public.blog_comments (
     id integer NOT NULL,
     date timestamp with time zone NOT NULL,
@@ -18,13 +13,6 @@ CREATE TABLE public.blog_comments (
     reports json DEFAULT '[]'::json NOT NULL
 );
 
-
-ALTER TABLE public.blog_comments OWNER TO postgres;
-
---
--- Name: blog_comments_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
 CREATE SEQUENCE public.blog_comments_id_seq
     AS integer
     START WITH 1
@@ -34,18 +22,9 @@ CREATE SEQUENCE public.blog_comments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.blog_comments_id_seq OWNER TO postgres;
-
---
--- Name: blog_comments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
 
 ALTER SEQUENCE public.blog_comments_id_seq OWNED BY public.blog_comments.id;
 
-
---
--- Name: blog_posts; Type: TABLE; Schema: public; Owner: postgres
---
 
 CREATE TABLE public.blog_posts (
     id integer NOT NULL,
@@ -59,13 +38,6 @@ CREATE TABLE public.blog_posts (
     image text DEFAULT 'none.webp'::text NOT NULL
 );
 
-
-ALTER TABLE public.blog_posts OWNER TO postgres;
-
---
--- Name: blog_posts_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
 CREATE SEQUENCE public.blog_posts_id_seq
     AS integer
     START WITH 1
@@ -75,31 +47,13 @@ CREATE SEQUENCE public.blog_posts_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.blog_posts_id_seq OWNER TO postgres;
-
---
--- Name: blog_posts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
 ALTER SEQUENCE public.blog_posts_id_seq OWNED BY public.blog_posts.id;
-
-
---
--- Name: session; Type: TABLE; Schema: public; Owner: postgres
---
 
 CREATE TABLE public.session (
     sid character varying NOT NULL,
     sess json NOT NULL,
     expire timestamp(6) without time zone NOT NULL
 );
-
-
-ALTER TABLE public.session OWNER TO postgres;
-
---
--- Name: users; Type: TABLE; Schema: public; Owner: postgres
---
 
 CREATE TABLE public.users (
     id integer NOT NULL,
@@ -110,13 +64,6 @@ CREATE TABLE public.users (
     admin boolean DEFAULT false NOT NULL
 );
 
-
-ALTER TABLE public.users OWNER TO postgres;
-
---
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
 CREATE SEQUENCE public.users_id_seq
     AS integer
     START WITH 1
@@ -125,40 +72,13 @@ CREATE SEQUENCE public.users_id_seq
     NO MAXVALUE
     CACHE 1;
 
-
-ALTER TABLE public.users_id_seq OWNER TO postgres;
-
---
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
 ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
-
-
---
--- Name: blog_comments id; Type: DEFAULT; Schema: public; Owner: postgres
---
 
 ALTER TABLE ONLY public.blog_comments ALTER COLUMN id SET DEFAULT nextval('public.blog_comments_id_seq'::regclass);
 
-
---
--- Name: blog_posts id; Type: DEFAULT; Schema: public; Owner: postgres
---
-
 ALTER TABLE ONLY public.blog_posts ALTER COLUMN id SET DEFAULT nextval('public.blog_posts_id_seq'::regclass);
 
-
---
--- Name: users id; Type: DEFAULT; Schema: public; Owner: postgres
---
-
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
-
-
---
--- Data for Name: blog_comments; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.blog_comments (id, date, author_id, content, reactions, blog_id, parent_id, reported, deleted, edited, history, reports) VALUES (10, '2021-04-29 12:21:36+02', 7, '> &quot;It''s a bit dry for me!&quot;
 
@@ -198,11 +118,6 @@ INSERT INTO public.blog_comments (id, date, author_id, content, reactions, blog_
 INSERT INTO public.blog_comments (id, date, author_id, content, reactions, blog_id, parent_id, reported, deleted, edited, history, reports) VALUES (28, '2021-04-29 12:42:08+02', 7, 'Never change', '[{"userId":2,"reaction":"like"}]', 7, 12, false, false, false, '[]', '[]');
 INSERT INTO public.blog_comments (id, date, author_id, content, reactions, blog_id, parent_id, reported, deleted, edited, history, reports) VALUES (41, '2021-04-30 13:43:20+02', 2, 'NO!', '[]', 7, 19, false, false, false, '[]', '[]');
 INSERT INTO public.blog_comments (id, date, author_id, content, reactions, blog_id, parent_id, reported, deleted, edited, history, reports) VALUES (43, '2021-04-30 13:46:56+02', 2, 'test', '[]', 7, NULL, false, true, false, '[]', '[]');
-
-
---
--- Data for Name: blog_posts; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.blog_posts (id, date, author_id, content, tags, views, reactions, title, image) VALUES (4, '2021-04-29 12:07:19+02', 3, 'Here''s a list of some of the places I''d like to visit:
 
@@ -408,18 +323,8 @@ Another Enlightenment era charitable innovation was the dispensary; these would 
 
 The Royal Naval Hospital, Stonehouse, Plymouth, was a pioneer of hospital design in having "pavilions" to minimize the spread of infection. John Wesley visited in 1785, and commented "I never saw anything of the kind so complete; every part is so convenient, and so admirably neat. But there is nothing superfluous, and nothing purely ornamented, either within or without." This revolutionary design was made more widely known by John Howard, the philanthropist. In 1787 the French government sent two scholar administrators, Coulomb and Tenon, who had visited most of the hospitals in Europe.[40] They were impressed and the "pavilion" design was copied in France and throughout Europe.', '["war","history"]', 1, '[{"userId":15,"reaction":"like"}]', 'A short history of hospitals', 'museums-victoria-5g3m1WPjrLI-unsplash.webp');
 
-
---
--- Data for Name: session; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
 INSERT INTO public.session (sid, sess, expire) VALUES ('_oO8MUfZOpJNongE2U4MRIWYmCdSJq4e', '{"cookie":{"originalMaxAge":null,"expires":null,"httpOnly":false,"path":"/"},"passport":{}}', '2021-05-01 10:53:19');
 INSERT INTO public.session (sid, sess, expire) VALUES ('-ko9v0OqtlA35hIAnc_4IbX41GSHr5rf', '{"cookie":{"originalMaxAge":null,"expires":null,"httpOnly":false,"path":"/"},"passport":{"user":15}}', '2021-05-01 17:28:22');
-
-
---
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.users (id, username, supersecretword, salt, email, admin) VALUES (2, 'AlexanderTheGreat', '50b0717e68b19e814525322eaeb58ee51378dd8ec72bfd4976cd8be337cb91690bfdaf4604bf928156924895c4f24236d2f307b016f8ca14964109eebff6f53e', 'a4b97b2176cf4d', 'alexander@greece.com', true);
 INSERT INTO public.users (id, username, supersecretword, salt, email, admin) VALUES (3, 'Motecuzoma', 'cf939086d29eef42290bb82e4ac5d15e95811804c2aabaae0dfa4521060edffb56a1001d8fb9511d245f57d2d8c6e69ae560e8c9b6d9a0e4e48a508c71575400', '6fcb6536c75c1d', 'aztecking@mexico.com', true);
@@ -434,92 +339,36 @@ INSERT INTO public.users (id, username, supersecretword, salt, email, admin) VAL
 INSERT INTO public.users (id, username, supersecretword, salt, email, admin) VALUES (19, 'MarieCurie', '044fae89b0ac16e8b6832303968a3fab95f51f5bec25a92d1f8a3a01295eb7b5c83d982c11887ce2f570c05f01b7dbb3c857f21525e9a22dcab14595923a8b73', '3fef41a162e429', 'marie@curieinstitute.com', false);
 INSERT INTO public.users (id, username, supersecretword, salt, email, admin) VALUES (20, 'Boudicca', '246f1b8b88697f7ba32f71a4d23ea098a9bb8da3f0fb9fe5504083be94b04c34bc1ecaa164889dc65a7a8e0baf9a2a6ae4a38ecce32306bf4ee86de6f0af500f', 'b9f1bb80ed1c15', 'boudicca@iceni.com', false);
 
-
---
--- Name: blog_comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
 SELECT pg_catalog.setval('public.blog_comments_id_seq', 46, true);
-
-
---
--- Name: blog_posts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.blog_posts_id_seq', 9, true);
 
-
---
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
 SELECT pg_catalog.setval('public.users_id_seq', 20, true);
-
-
---
--- Name: blog_comments blog_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
 
 ALTER TABLE ONLY public.blog_comments
     ADD CONSTRAINT blog_comments_pkey PRIMARY KEY (id);
 
 
---
--- Name: blog_posts blog_posts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
 ALTER TABLE ONLY public.blog_posts
     ADD CONSTRAINT blog_posts_pkey PRIMARY KEY (id);
 
-
---
--- Name: session session_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
 
 ALTER TABLE ONLY public.session
     ADD CONSTRAINT session_pkey PRIMARY KEY (sid);
 
 
---
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
 ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_pkey PRIMARY KEY (id);
 
-
---
--- Name: IDX_session_expire; Type: INDEX; Schema: public; Owner: postgres
---
-
 CREATE INDEX "IDX_session_expire" ON public.session USING btree (expire);
-
-
---
--- Name: blog_comments blog_comments_author_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
 
 ALTER TABLE ONLY public.blog_comments
     ADD CONSTRAINT blog_comments_author_id_fkey FOREIGN KEY (author_id) REFERENCES public.users(id) ON DELETE CASCADE;
 
-
---
--- Name: blog_comments blog_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
 ALTER TABLE ONLY public.blog_comments
     ADD CONSTRAINT blog_fk FOREIGN KEY (blog_id) REFERENCES public.blog_posts(id) ON DELETE CASCADE;
-
-
---
--- Name: blog_posts blog_posts_author_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
 
 ALTER TABLE ONLY public.blog_posts
     ADD CONSTRAINT blog_posts_author_id_fkey FOREIGN KEY (author_id) REFERENCES public.users(id) ON DELETE CASCADE;
 
-
---
--- PostgreSQL database dump complete
---
 
