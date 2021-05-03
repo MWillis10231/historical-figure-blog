@@ -30,7 +30,7 @@ List of features:
 * Editing system for posts and replies
 * Reactions using emojis and Redux
 * Reporting of posts
-* User registration and log-in via API
+* User registration and log-in via API and Passport
 * Secure routes using Express
 * CRUD operations on blog posts and comments
 * Images delivered through the REST API (including image list, enabling selection from front-end)
