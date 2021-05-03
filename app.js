@@ -1,4 +1,5 @@
 var express = require('express');
+const mountRouters = require('./routes')
 var path = require('path');
 //var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -11,9 +12,6 @@ var session = require('express-session')
   , pgSession = require('connect-pg-simple')(session);
 var uid = require('uid-safe')
 
-var blogRouter = require('./routes/blog');
-var imageRouter = require('./routes/images')
-var accountRouter = require('./routes/account')
 
 //app setup, port if not Heroku, local
 var app = express();
@@ -51,27 +49,15 @@ app.use(cors({
 if (process.env.NODE_ENV === "production") {
     // server static content
     // NPM run build
-    console.log(path.join(__dirname, "client/build"))
-    app.use(express.static(path.join(__dirname, "client/build")))
+    app.use(express.static(path.join(__dirname, "client/build")));
 }
 
 // Initialise passport and restore authentication state from the session (if any)
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Secure routes
-function requireLogin(req, res, next) {
-  if (req.isAuthenticated()) {
-    next();
-  } else {
-    res.status(403).json({error: "User is not logged in"});
-  }
-}
-
 // set up routes
-app.use('/api/blog', requireLogin, blogRouter);
-app.use('/api/images', requireLogin, imageRouter)
-app.use('/api/account', accountRouter)
+mountRouters(app);
 
 // catch-all if non-existant route
 app.get("*", (req, res) => {

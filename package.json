@@ -2,10 +2,10 @@
   "name": "historicalfigureblogserver",
   "version": "1.0.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "engines": {
     "node": "14.15.4",
