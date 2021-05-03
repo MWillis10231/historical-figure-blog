@@ -1,0 +1,27 @@
+.ReactionButtonContainer {
+    width: fit-content;
+    border: 1px solid lightgrey;
+}
+
+
+.ReactionEmojiButton {
+    background-color: transparent;
+    margin: 1px;
+    padding: 1px;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+.ReactionEmojiButton:hover {
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+.ReactionEmojiButton:disabled {
+    background-color: lightgrey;
+}
+
+.ReactionEmojiButton:disabled:hover {
+    cursor: not-allowed;
+}

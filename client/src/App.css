@@ -1,0 +1,209 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Cinzel', serif; 
+}
+
+h2, h3, h4, h5, h6, legend {
+    font-family: 'Roboto Slab', serif;
+}
+
+p, li, button, table, label, input, textarea, select {
+    font-family: 'Sanchez', serif;
+}
+
+thead {
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav li {
+    padding: 1%;
+}
+
+main, article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    margin-top: 1%;
+    height: 5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+blockquote {
+    padding: 0 0.5rem;
+    margin: 1% 3%;
+    border-left: 5px solid lightgrey;
+}
+
+button {
+    text-align: center;
+    width: fit-content;
+    padding: 1%;
+    background-color: white;
+    margin: 1% 0.5%;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(203, 92%, 80%);
+}
+
+button:disabled:hover {
+    cursor: not-allowed;
+    background-color: white;
+}
+
+figure {
+    width: 100%;
+    align-self: center;
+}
+
+img {
+    width: 100%;
+}
+
+input, select {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.xbutton {
+    color: red;
+    font-size: 1.25rem;
+    min-width: 60px;
+    min-height: 40px;
+    border: none;
+    background-color: transparent;
+}
+
+.choiceButton {
+    min-width: 60px;
+    min-height: 40px;
+    border: none;
+    background-color: lightskyblue;
+}
+
+
+.deleted {
+    text-decoration: line-through;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 90px;
+    padding: 1%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 130%;
+    left: 50%;
+    margin-left: -45px;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .ButtonContainer {
+    width: 100%;
+}
+
+.ButtonContainer button {
+    width: fit-content;
+}
+
+  .FormItem {
+    padding: 1%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.RadioButtonItem {
+    padding: 1%;
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.RadioButtonContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.blue {
+    background-color: rgba(224, 255, 255, 0.2);
+}
+
+.blue:hover {
+    background-color: rgba(224, 255, 255, 0.1);
+}

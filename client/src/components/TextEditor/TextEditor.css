@@ -1,0 +1,87 @@
+.TextEditor {
+    background-color: peachpuff;
+    padding: 1.5%;
+}
+
+.TextEditorPreviewTitle {
+    padding-bottom: 1%;
+    border-bottom: 1px dashed black;
+}
+
+.TextEditorPreview {
+    border: 1px solid grey;
+    border-radius: 2px;
+    background-color: white;
+    padding: 1%;
+}
+
+.TextEditorButtonContainer {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+.NormalButtonContainer, .ExtendedButtonContainer {
+    width: 210px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.NormalButtonContainer {
+    margin-right: 2px;
+}
+
+.NormalButtonContainer button, .ExtendedButtonContainer button {
+    background-color: white;
+    border: 0px;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.NormalButtonContainer button:hover, .ExtendedButtonContainer button:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.ButtonText {
+    font-size: 0.45rem;
+    font-weight: 500;
+    line-height: .8;
+}
+
+.h1, .h2, .h3, .h4 {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.h1 {
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}
+
+.h2 {
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+
+.h3 {
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.h4 {
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+}

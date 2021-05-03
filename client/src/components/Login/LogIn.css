@@ -1,0 +1,31 @@
+.LogIn header {
+    padding: 2%;
+}
+
+.LogIn table {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: fit-content;
+    padding: 0 2%;
+}
+
+.LogIn table tr {
+    background-color: lightcyan;
+}
+
+.LogIn table th {
+    padding: 2%;
+    width: 10rem;
+}
+
+.LogIn table td {
+    padding: 2%;
+    width: 10rem;
+    text-align: center;
+}
+
+.LogIn {
+    background-color: lightcyan;
+    padding: 1%;
+}

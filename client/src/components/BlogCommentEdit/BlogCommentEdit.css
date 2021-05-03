@@ -1,0 +1,67 @@
+.BlogCommentEdit {
+    display: flex;
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0.5% 0;
+    padding: 0;
+    width: fit-content;
+
+}
+
+.BlogCommentEditItem {
+    padding: 2px;
+    margin: 0 2px;
+    width: 40px;
+    background-color: lightgrey;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.BlogCommentEditItem:hover {
+    cursor: pointer;
+    color: blue;
+    background-color: hsl(0, 0%, 88%);
+}
+
+.BlogCommentEditFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.BlogCommentEditForm {
+    width: 100%;
+}
+
+.BlogCommentEditForm input {
+    align-content: center;
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    padding: 1%;
+}
+
+.BlogCommentReportFormContainer {
+    border-radius: 10px;
+    border: 1px black solid;
+    background-color: white;
+    position: absolute;
+    padding: 2%;
+    margin: 0;
+    width: 500px;
+    z-index: 1;
+}
+
+.BlogCommentReportForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.BlogCommentReportComment {
+    border: 1px grey dashed;
+    padding: 5% 1% 1%;
+    margin-bottom: 2%;
+}
+
+

@@ -1,0 +1,14 @@
+.BlogPostSingleForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  background-color: lightcyan;
+  padding: 1% 2%;
+}
+
+.BlogContent {
+    background-color: lightcyan;
+    padding: 1% 2%;
+
+}

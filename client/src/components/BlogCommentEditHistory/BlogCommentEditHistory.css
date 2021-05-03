@@ -1,0 +1,27 @@
+.blogCommentEditedContainer {
+    position: relative;
+    display: flex;
+    margin: 0 1%;
+}
+
+.BlogCommentEditHistory {
+    display: block;
+    list-style-type: none;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px black solid;
+    padding: 1rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.TableHeader {
+    min-width: 200px;
+    font-style: oblique;
+}
+
+.BlogCommentEditHistory td {
+    min-width: 250px;
+    padding: 2% 0;
+    margin: 1%;
+}

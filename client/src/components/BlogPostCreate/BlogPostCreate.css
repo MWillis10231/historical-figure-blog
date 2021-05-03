@@ -1,0 +1,24 @@
+.BlogPostCreateScheduleTime {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+}
+
+.BlogPostCreateDateTime {
+    align-items: center;
+}
+
+#newPostScheduleTime {
+    width: 100%;
+}
+
+#NewPostContent {
+    height: 15rem;
+}
+
+.newBlogPostContainer {
+    margin: 1%;
+    padding: 1%;
+    background-color: lightcyan;
+}
